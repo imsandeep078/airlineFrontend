@@ -1,0 +1,41 @@
+<div class="col-md-4 offset-md-4 mt-5">
+    <input type="search" name="flightNumber" class="form-control" placeholder="Enter flight number"
+        [(ngModel)]='flightNumber'>
+    <button type="button" class="btn btn-outline-primary" (click)='searchFlightByExecutive()'>Search</button>
+
+
+</div>
+<div class="container" *ngIf='OccupancyInformation'>
+    <div class="row">
+        <div class="form-group">
+            <div class="container mt-5">
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Flight Number</th>
+                            <th>Total Seats</th>
+                            <th>Total Bussiness Class Seats</th>
+                            <th>Total First Class Seats</th>
+                            <th>Available Bussiness Class Seats</th>
+                            <th>Booked Bussiness Class Seats</th>
+                            <th>Available First Class Seats</th>
+                            <th>Booked First Class Seats</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{OccupancyInformation.flightNumber}}</td>
+                            <td>{{OccupancyInformation.totalSeats}}</td>
+                            <td>{{OccupancyInformation.totalBussinessClassSeats}}</td>
+                            <td>{{OccupancyInformation.totalFirstClassSeats}}</td>
+                            <td>{{OccupancyInformation.availableBussinessClassSeats}}</td>
+                            <td>{{OccupancyInformation.bookedBussinessClassSeats}}</td>
+                            <td>{{OccupancyInformation.availableFirstClassSeats}}</td>
+                            <td>{{OccupancyInformation.bookedFirstClassSeats}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
